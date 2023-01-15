@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    tools:context=".activities.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/l_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/primary_red"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/app_name"
+            android:fontFamily="@font/poppins_bolditalic"
+            android:textSize="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/btn_setting"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/setting"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp" />
+        <ImageView
+            android:id="@+id/btn_logout"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/logout"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/l_toolbar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/user_rcv" />
+
+</RelativeLayout>
